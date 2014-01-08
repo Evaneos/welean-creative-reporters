@@ -1,0 +1,30 @@
+{
+  "name": "creative-reporters",
+  "version": "0.4.15",
+  "homepage": "https://github.com/Evaneos/welean-creative-reporters",
+  "authors": [
+    "Mathieu Lemaire <contact@getvega.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "moment": "~2.4.0",
+    "underscore": "~1.5.2",
+    "backbone.stickit": "~0.6.3",
+    "angular": "1.2.6",
+    "bootstrap": "~3.0.3",
+    "angular-route": "1.2.6",
+    "angular-animate": "1.2.6"
+  },
+  "resolutions": {
+    "angular": "1.2.6"
+  }
+}

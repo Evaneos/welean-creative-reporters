@@ -1,0 +1,36 @@
+doctype 5
+html
+    head
+        meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+        meta(name="viewport", content="width=320, target-densitydpi=device-dpi")
+        - //- Juice does not resolve correctly those root'ed urls
+        - //- because it reads them via file://- instead of browser
+        - if (locals.browser)
+            link(rel='stylesheet', href='/css/email/index.css')
+        - else
+            link(rel='stylesheet', href='css/email/index.css')
+
+    body
+
+        mixin btn(_width)
+            table(cellpadding="0", cellspacing="0", border="0", class=attributes.class + ' btn'): tr
+                td(align="center", width=_width)
+                    a(attributes)
+                        block
+
+        mixin tdw(_width)
+            td(width=_width, class='w' + _width, attributes)
+                block
+
+        //- OUTER TABLE LAYOUT
+        table(width="100%", cellpadding="0", cellspacing="0", border="0", id="background-table"): tbody
+            tr: td(align="center", id="background-table-inner")
+                table(class="w640", style="margin:0 10px;", width="640", cellpadding="0", cellspacing="0", border="0"): tbody
+
+                    //- horizontal spacer
+                    tr: +tdw("640")(height="20")
+
+                    block content
+
+                    //- horizontal spacer
+                    tr: +tdw("640")(height="60")

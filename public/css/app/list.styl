@@ -1,0 +1,60 @@
+#main-col-container
+    overflow visible
+
+    #filters
+        position relative
+        width ($list-width - 2 * $gutter-size + 14px)
+        margin 6px 2px 0 4px
+
+        > .btn
+            width 33.333333333333%
+
+.empty-post-list
+    padding 40px
+    text-align center
+    color $gray
+    font-style italic
+
+.post-list
+    padding ($gutter-size / 2)
+    margin-bottom 400px
+    transition all .3s ease-in-out
+    list-style none
+
+    > .post
+        margin-bottom ($gutter-size / 2)
+        translate: 0 0;
+        transition transform .2s ease-in-out
+
+        &:last-child
+            margin-bottom 0
+
+        &:hover
+            cursor pointer
+
+        &.ng-move,
+        &.ng-enter,
+        &.ng-leave {
+            -webkit-transition:all linear 0.3s;
+            transition:all linear 0.3s;
+        }
+
+        &.ng-leave.ng-leave-active,
+        &.ng-move,
+        &.ng-enter {
+            opacity:0;
+            max-height:0;
+            translate: -150px 0;
+        }
+
+        &.ng-leave,
+        &.ng-move.ng-move-active,
+        &.ng-enter.ng-enter-active {
+            opacity:1;
+            max-height:300px;
+            translate: 0 0;
+        }
+
+        &.selected
+            translate: 10px 0;
+            transition transform .2s ease-in-out

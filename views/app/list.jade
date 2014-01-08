@@ -1,0 +1,21 @@
+div(ng-controller='ListController')
+
+    include viewer-tpl
+
+    map-posts#main-map-contrainer(posts='posts', bounds='mapBounds', post-selected='selectedPostOnMap', on-post-clicked='onClick(post)')
+
+    div#main-col-container(ng-cloak)
+
+        mixin filter-btn(filter, title)
+            button.btn.btn-default(type='button', ng-class="{ active: selectedFilter == '#{filter}' }", ng-click="selectFilter('#{filter}')")
+                | #{title}
+
+        div#filters.btn-group
+            +filter-btn('uploaded', 'Les + récents')
+            +filter-btn('personal', 'Mes votes')
+            +filter-btn('popularity', 'Les + populaires')
+
+        p.empty-post-list(ng-hide='posts') Aucun résultat
+
+        ul.post-list(ng-show='posts')
+            include post-tpl

@@ -1,0 +1,47 @@
+div(ng-controller='PostEditorController')
+
+        map-posts#main-map-contrainer(bounds='bounds')
+
+        div#main-col-container(ng-cloak)
+
+            form.form-horizontal(novalidate, role="form", style="width:420px; margin:50px auto 0")
+                div.form-group
+                    label.col-sm-2.control-label Name:
+                    div.col-sm-10
+                        input.form-control(type="text", ng-model="post.name")
+                
+                div.form-group
+                    label.col-sm-2.control-label Description:
+                    div.col-sm-10
+                        textarea.form-control(ng-model="post.description", rows="3")
+                
+                div.form-group
+                    label.col-sm-2.control-label Type: 
+                    select(ng-model="post.type")
+                        option(value="") Select a type
+                        option(value="image") Photo
+                        option(value="article") Article
+
+
+                div.form-group(ng-show='post.type === \'image\'')
+                    label.col-sm-2.control-label Url de l'image:
+                    div.col-sm-10
+                        input.form-control(type="text", ng-model="post.url")
+
+                div.form-group(ng-show='post.type === \'article\'')
+                    label.col-sm-2.control-label Contenu:
+                    div.col-sm-10
+                        textarea.form-control(ng-model="post.content", rows="6")
+                
+                div.form-group
+                    label.col-sm-2.control-label Latitude:
+                    div.col-sm-10
+                        input.form-control(type="text", ng-model="post.postition.lat", value="48.6833", ng-init="post.postition.lat='48.6833'")
+                
+
+                div.form-group
+                    label.col-sm-2.control-label Longitude:
+                    div.col-sm-10
+                        input.form-control(type="text", ng-model="post.postition.lng", value="6.2", ng-init="post.postition.lng='6.2'")
+
+                button.btn.btn-default(ng-click="post.name && post.type && post.postition && save()") Save

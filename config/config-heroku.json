@@ -1,0 +1,25 @@
+{
+    "http": {
+        "host": "www.creative-reporters.com"
+    },
+
+    "mail": {
+        "noreply": "noreply@creative-reporters.com",
+        "contact": "contact@creative-reporters.com"
+    },
+
+    "cloudinary": {
+        "cloud_name": "",
+        "api_key": "",
+        "api_secret": ""
+    },
+
+    "facebook": {
+        "clientId": "",
+        "clientSecret": ""
+    },
+
+    "mapbox": {
+        "api_key": ""
+    }
+}

@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#map,
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.test {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #f00;
+  width: 100px;
+  height: 100px;
+}
+.count-icon {
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 20px;
+  line-height: 30px;
+  position: relative;
+  background: #630;
+  color: #fff;
+  z-index: 8;
+}
+.count-icon::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 12px solid #630;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  margin-left: -12px;
+  z-index: 8;
+}
+.count-icon-selected {
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 20px;
+  line-height: 30px;
+  position: relative;
+  background: #fff;
+  color: #630;
+  z-index: 9;
+}
+.count-icon-selected::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 12px solid #fff;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  margin-left: -12px;
+  z-index: 8;
+}
+.map-pin-out {
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 20px;
+  line-height: 30px;
+  position: absolute;
+  padding: 6px 8px;
+  color: #fff;
+  background-color: #630;
+  width: 40px;
+  height: 40px;
+}

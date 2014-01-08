@@ -1,0 +1,66 @@
+#outlook a{padding:0}
+body{width:100% !important}
+.ReadMsgBody{width:100%}
+.ExternalClass{width:100%;display:block !important}
+.yshortcuts,.yshortcuts a,.yshortcuts a:link,.yshortcuts a:visited,.yshortcuts a:hover,.yshortcuts a span{color:#000;text-decoration:none !important;border-bottom:none !important;background:none !important}
+img{outline:none;text-decoration:none;display:inline-block}
+br,strong br,b br,em br,i br{line-height:100%}
+h1,h2,h3,h4,h5,h6{line-height:100% !important;-webkit-font-smoothing:antialiased}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:#00f !important}
+h1 a:active,h2 a:active,h3 a:active,h4 a:active,h5 a:active,h6 a:active{color:#f00 !important}
+h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited,h5 a:visited,h6 a:visited{color:#800080 !important}
+table td,table tr{border-collapse:collapse}
+.yshortcuts,.yshortcuts a,.yshortcuts a:link,.yshortcuts a:visited,.yshortcuts a:hover,.yshortcuts a span{color:#000;text-decoration:none !important;border-bottom:none !important;background:none !important}
+code{white-space:normal;word-break:break-all}
+body{background-color:#e0e0e0;margin:0;color:#444;padding:0;font-size:14px}
+#background-table{background-color:#e0e0e0}
+#background-table-inner{background-color:#e0e0e0}
+body,td{font-family:'Helvetica Neue',Arial,Helvetica,Geneva,sans-serif}
+.header-content,.header-title,.footer-content-left,.footer-content-right{-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+.lighter{color:#8f8f8f}
+a{color:#db4652;text-decoration:none;}
+a:hover{text-decoration:none}
+.btn td{border-radius:4px;color:#fff;background-color:#2f90d7;text-align:center;display:block;height:46px;}
+.btn td a{color:#fff;line-height:46px;font-family:'Helvetica Neue',Arial,Helvetica,Geneva,sans-serif;font-size:22px}
+.btn.smaller td{height:40px;}
+.btn.smaller td a{color:#fff;font-size:16px;line-height:40px}
+.align-left{text-align:left}
+.align-center{text-align:center}
+.korpos-icon{vertical-align:-4px;margin-left:5px;margin-right:8px;outline:none;text-decoration:none;display:inline-block;border:none;}
+.korpos-icon.big{vertical-align:-8px;margin-left:8px;margin-right:10px}
+.simple-content{font-size:14px;line-height:22px;color:#444}
+#intro{background-color:#666;-webkit-font-smoothing:antialiased;color:#eee;}
+#intro a{color:#2f90d7;text-decoration:none}
+#intro .avatar{line-height:0;text-align:center}
+.sticky-message{font-size:22px;color:#db4652;text-align:center}
+#header{background-color:#db4652;color:#fff;font-size:16px;}
+#header .btn td,#header .btn a{background-color:#fff;color:#db4652}
+.header-title{color:#f1b5ba}
+.header-metric{font-size:45px;color:#fff;line-height:60px;}
+.header-metric .small{font-size:30px}
+.email-section-title{font-size:22px;color:#666;text-align:center}
+.news .post .message{font-size:14px;line-height:20px;}
+.news .post .message a{color:#db4652;text-decoration:none;}
+.news .post .message a:hover{text-decoration:none}
+.news .post img{border-radius:4px}
+.news .post .date{font-size:12px;color:#999;text-align:left}
+.news .separator td{border-bottom:1px solid #eee}
+.challenge .title{font-size:18px;margin-bottom:5px}
+.challenge .date{font-size:12px;color:#999}
+.challenge .description{color:#444;margin-top:15px;font-size:14px;line-height:20px;}
+.challenge .description a{color:#db4652;text-decoration:none;}
+.challenge .description a:hover{text-decoration:none}
+.challenge .rankings .rank-row td{padding:7px 0;font-size:16px;border-top:1px solid #eee;line-height:25px;}
+.challenge .rankings .rank-row td.rank-title{font-size:18px;color:#999;text-align:center}
+.challenge .rankings .rank-row .nada{color:#999;text-align:center;line-height:70px}
+.challenge .rankings .rank-row .rank{color:#999;text-align:right}
+.challenge .rankings .rank-row .avatar{text-align:center;line-height:0;}
+.challenge .rankings .rank-row .avatar img{display:inline-block}
+.challenge .rankings .rank-row .points{text-align:right;color:#2f90d7}
+.challenge .rankings .rank-row.myself td{color:#fff;background-color:#2f90d7;}
+.challenge .rankings .rank-row.myself td.rank{border-radius:4px 0 0 4px}
+.challenge .rankings .rank-row.myself td.points{border-radius:0 4px 4px 0}
+.challenge .btn td,.challenge .btn a{background-color:#db4652;color:#fff}
+.radius-top{border-radius:6px 6px 0 0}
+.radius-bottom{border-radius:0 0 6px 6px}
+.btn{border-radius:4px}

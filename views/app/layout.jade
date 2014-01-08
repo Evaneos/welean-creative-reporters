@@ -1,0 +1,65 @@
+- title = title || 'Creative Reporters';
+- viewClasses = viewClasses || 'other';
+- clientVariables = clientVariables || '';
+- view = view || '';
+
+doctype 5
+html(xmlns:og="http://opengraphprotocol.org/schema/", xmlns:fb="http://www.facebook.com/2008/fbml")
+
+    include ../watermark
+
+    head
+        // fonts
+        link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700,400italic,700italic')
+
+        title= title
+        // metas
+
+        meta(name="viewport", content="width=1300")
+        meta(name="robots", content="noindex")
+
+        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        // assets
+        link(rel='stylesheet', href="/css/app/index.css")
+        link(rel='shortcut icon', type='image/x-icon', href='/media/favicon.ico')
+        link(rel='icon', type='image/png', href='/media/favicon.png')
+
+    body(class=viewClasses)
+
+        div#main-nav.navbar.navbar-inverse.navbar-fixed-top.affix(ng-controller="SessionController", ng-cloak)
+
+            ul#profile-menu.nav.navbar-nav.navbar-right(ng-show="isLogged")
+                li.dropdown
+                    a(href='#', class="dropdown-toggle", data-toggle="dropdown")
+                        | Mon compte
+                        b.caret
+                    ul.dropdown-menu
+                        //- li: a(href='#/edit') Importer
+                        //- li: a(href='#') Inviter
+                        //- li.divider
+                        li: a(href='#', ng-click="logout()") Se déconnecter
+
+            ul#profile-menu.nav.navbar-nav.navbar-right(ng-hide="isLogged")
+                li
+                    a(href='#', ng-click="login()")
+                        | Se connecter
+
+            //- ul#import-menu.nav.navbar-nav.navbar-left
+            //-     li
+            //-         a(href='#')
+            //-             i.icon-upload
+            //-             | Importer
+
+            div.navbar-header
+
+                a.navbar-brand(href='#')
+                    span Creative
+                    i.icon-logo
+                    span Reporters
+
+        block content
+
+        include ../scripts
+
+        block view-script

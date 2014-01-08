@@ -1,0 +1,62 @@
+$post-height = 300px;
+$context-height = 60px;
+
+.offset-scroll
+    display block
+    position relative
+    top -200px
+    visibility hidden
+
+.post
+
+    height $post-height
+
+.post,
+#viewer .modal-dialog > .modal-content > .modal-body
+
+    background #000
+    background rgba(0, 0, 0, .6)
+    background-size 100%
+    background-size cover
+    position relative
+
+    > .context
+        absolute bottom 0 left 0
+        size 100% $context-height
+        padding $gutter-size $gutter-size $gutter-size ($context-height + $gutter-size)
+        background rgba(0, 0, 0, 0.8)
+        color #FFF
+
+        > .avatar
+            absolute left 5px top 5px
+            size 50px 50px
+
+        > .title
+            font-size 18px
+            margin 2px 0 ($gutter-size/2) 0
+            font-weight normal
+            height 16px
+
+        > .legend
+
+            > .location
+                font-style italic
+                color $gray
+
+            > span
+                font-style italic
+                padding-right $gutter-size
+                color $gray
+
+            > .author
+                font-style normal
+                color $gray-light
+
+            > .date
+                display inline-block
+                margin-left -5px
+
+            > div.starred
+                float right
+                .stars
+                    padding-right 5px

@@ -1,0 +1,80 @@
+html
+    width 100%
+    height 100%
+
+body
+    background $gray-lighter
+    background radial-gradient(ellipse at center top, $gray-lighter 70%, darken($gray-lighter, 20%) 100%) fixed
+
+    #main-nav
+
+        $logo-width = 450px
+        .navbar-brand
+            absolute left 100px top 3px
+            width $logo-width
+            text-align center
+            padding 0
+
+            > i
+                display inline-block
+                color #f7931e
+                font-size 30px
+                line-height 1em
+                size 1em 1em
+                position relative
+                top 5px
+                transition all 1s ease-in-out
+                transform unquote('rotate(0deg)')
+
+            > span
+                display inline-block
+                text-transform uppercase
+                width ($logo-width / 2 - 60px)
+                text-align left
+                font-weight bold
+                letter-spacing .4em
+                margin-left 11px
+
+                &:first-child
+                    margin-right 7px
+                    text-align right
+
+        a
+            text-transform uppercase
+            letter-spacing 0.2em
+
+        #profile-menu
+            .dropdown-toggle
+                padding-top 17px
+                padding-bottom 13px
+            b
+                display inline-block
+                margin-left 4px
+                position relative
+                top -2px
+
+        #import-menu > li > a
+            padding-top 17px
+            padding-bottom 13px
+            i
+                display inline-block
+                margin-right 6px
+                position relative
+                font-size 30px
+                line-height 0
+                top 6px
+
+
+
+@keyframes loading-spin {
+    from { transform unquote('rotate(0deg)') }
+    to { transform unquote('rotate(360deg)') }
+}
+
+body.http-loading
+    #main-nav .navbar-brand > i
+        -webkit-animation: loading-spin 1s linear infinite;
+        -moz-animation: loading-spin 1s linear infinite;
+        -ms-animation: loading-spin 1s linear infinite;
+        -o-animation: loading-spin 1s linear infinite;
+        animation: loading-spin 1s linear infinite;

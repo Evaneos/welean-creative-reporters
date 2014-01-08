@@ -1,0 +1,10 @@
+extends empty-layout
+
+block header-content
+    h1 Erreur: #{error.message}
+
+block body-content
+    if settings['debug']
+        pre= error.stack
+    else
+        p.text-center An error ocurred!

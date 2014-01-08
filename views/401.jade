@@ -1,0 +1,18 @@
+extends empty-layout
+
+block header-content
+    h1 Accès non autorisé
+
+block body-content
+
+    script
+        window.onload = function() {
+            setTimeout(function() {
+                location.href = '#{redirectUrl}';
+            }, 2000);
+        };
+
+    div.lead.text-center
+        | Vous n'êtes pas autorisé à accéder à cette ressource.<br>
+        | Redirection vers&nbsp;
+        a(href=redirectUrl) #{redirectUrl}

@@ -1,0 +1,24 @@
+li.post(
+    ng-mouseover='selectPost($index)'
+    ng-mouseout='selectPost(null)'
+    ng-class='{ selected: selectedPost && post._id == selectedPost._id }'
+    ng-repeat='post in posts track by post._id'
+    ng-click='viewPost($index)'
+    style='background-image:url(\'{{ post.content.imageId | cloudinaryUrl:{width: 590, height: 300, format: \'jpg\', crop: \'fill\', flags: \'progressive\' } }}\')'
+)
+
+    a.offset-scroll(name='{{\'id\' + post._id}}')
+
+    div.context
+        img.avatar(ng-src='{{ post.avatar() }}')
+        h3.title {{ post.name }}
+
+        div.legend
+            span.author Par {{ post.user.name.first }} {{ post.user.name.last }}
+            //- span.location India, Varanasi -
+            span.date {{ post.date | date:'d MMMM yyyy' }}
+
+            div.starred
+                span.stars {{ post.starredCount }} votes -
+                a.star(href="#", ng-click="starPost(post)", ng-show="!isLogged() || !post.isStarredBy(getUser())", eat-click) Je vote !
+                span.starred-by-user(ng-show="isLogged() && post.isStarredBy(getUser())") J'ai voté

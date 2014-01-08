@@ -1,0 +1,36 @@
+script(type="text/javascript").
+    window.mixpanel = false;
+
+
+- if (process.env.NODE_ENV == 'production') {
+
+    script(src=__js, type='text/javascript')
+
+    // Google Analytics - tracked on prod
+    include ga-script
+
+    // Mixpanel - tracks page views on prod
+    include mixpanel-script
+
+- } else {
+
+    // vendor deps
+    // ----------------
+    each script in frontEndScripts.vendor
+        script(src=script, type='text/javascript')
+
+    // generated scripts
+    // ----------------
+    script(src='/js/templates.js', type='text/javascript')
+    script(src='/frontend/generated/common.ignore.js', type='text/javascript')
+
+    // all business code
+    // ----------------
+    each script in frontEndScripts.business
+        script(src=script, type='text/javascript')
+
+- }
+
+script(type='text/javascript').
+    webzine._frontData = !{JSON.stringify(clientVariables)}
+    webzine.bootstrap('webzine');

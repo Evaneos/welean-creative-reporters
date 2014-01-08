@@ -1,0 +1,24 @@
+div#viewer.modal(ng-show='viewerPost'): div.modal-dialog
+    div.modal-content
+        div.modal-body(style='background-image:url(\'{{ (viewerPost)?viewerPost.content.imageId:\'\' | cloudinaryUrl:{width: 1024, format: \'jpg\', flags: \'progressive\'} }}\')'
+            ng-click='closeViewer()')
+
+            div.context
+
+                img.avatar(ng-src='{{ viewerPost.avatar() }}')
+
+                h3.title {{ viewerPost.name }}
+
+                div.legend
+                    span.author Par {{ viewerPost.user.name.first }} {{ viewerPost.user.name.last }}
+                    //- span.location India, Varanasi -
+                    span.date {{ viewerPost.date | date:'d MMMM yyyy' }}
+                    
+                    div.starred
+                        span.stars {{ viewerPost.starredCount }} votes -
+                        a.star(href="#", ng-click="starPost(viewerPost)", ng-show="!isLogged() || !viewerPost.isStarredBy(getUser())", eat-click) Je vote !
+                        span.starred-by-user(ng-show="isLogged() && viewerPost.isStarredBy(getUser())") J'ai voté
+
+    button.close(type='button', data-dismiss='modal', ng-click='viewerPost = null') x
+    i.next.icon-arrow-right(type='button', ng-show='viewerIndex < posts.length', ng-click='nextPost()')
+    i.previous.icon-arrow-left(type='button', ng-show='viewerIndex > 0', ng-click='previousPost()')
