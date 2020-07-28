@@ -41,7 +41,7 @@
     "connect-redis": "~1.4.6",
     "connect-flash": "~0.1.1",
     "bcrypt": "~0.7.7",
-    "mongoose": "~3.8.1",
+    "mongoose": "~5.9.26",
     "async": "~0.2.9",
     "moment": "~2.4.0",
     "nconf": "~0.6.9",
